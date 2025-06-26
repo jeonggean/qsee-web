@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  aside {
+    background-color: #2398E1;
+    color: white;
+    width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    /* height: 100vh; */
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  
+  .logo img {
+    width: 220px;
+  }
+  
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 24px;
+  }
+
+  .logout {
+    text-align: left;
+  }
+
+  .main-container{
+    flex-grow: 1;
+    margin-left: 280px; /* sesuai lebar aside */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+    /* padding: 20px; */
+  }
+  
+  main {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #f4f6f9;
+    padding-bottom: 30px; /* agar tidak nempel di bawah */
+  }
+  
+  header {
+    background-color: #2398E1;
+    color: white;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-info .name {
+    font-weight: 600;
+    font-size: 23px;
+    margin: 0;
+  }
+  
+  .user-info .role {
+    font-size: 18px;
+    opacity: 0.9;
+    margin: 0;
+  }
+  
+  .judul{
+    font-size: 30px;
+    color: #155B87;
+    position: sticky;
+    top: 80px; /* mengatur agar muncul di bawah header */
+    background-color: #f4f6f9;
+    z-index: 9;
+    padding: 10px 20px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 30px;
+    max-width: 1300px;
+    margin: 30px auto 0 auto;
+    background: white;
+    border-radius: 12px;
+    /* tambahan */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    margin: 20px 5px 40px;
+    color: #155B87;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  label {
+    font-weight: 600;
+    /* tambahan */
+    display: block;
+    margin-bottom: 8px;
+    color: #1A72A9;
+    font-size: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    /* tambahan */
+    flex: 1; /* Supaya field sejajar saat di form-row */
+    min-width: 250px; /* Biar responsive saat layar kecil */
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right-column {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Untuk vertical center */
+    justify-content: center;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f1f8ff;
+    /* tambahan */
+    font-size: 16px;
+  }
+  
+  textarea {
+    min-height: 80px;
+    /* tambahan */
+    resize: vertical;
+  }
+  
+  .upload-box {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    background: #f9f9f9;
+    position: relative;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #1992e6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+  }
+  .btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  .btn.laporan {
+    background-color: #0a4770 ;
+  }
+  .submit-btn:hover {
+    background-color: #117ac3;
+  }
+
+  .row {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .label-col {
+    width: 20%;
+    font-weight: 600;
+    color: #1A72A9;
+    font-size: 20px;
+    padding-top: 12px;
+  }
+  
+  .desc-col {
+    width: 35%;
+    font-weight: 455;
+    font-size: 18px;
+    color: #1A72A9;
+  }
+  
+  .desc-col select {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #E9F5FC;
+    border: 1px solid #ccc;
+  }
+  
+  .desc-col textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f1f8ff;
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  .upload-box img{
+    width: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .upload-box p{
+    font-size: 16px;
+  }
+
+  select, select option {
+    font-size: 18px; 
+  }
+
+  
+  h2 {
+    background-color: #E9F5FC;
+    color: #1A72A9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+  
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 18px;
+    color: #1A72A9;
+    padding-left: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .info-item {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .label {
+    width: 200px; /* Sesuaikan agar label sejajar */
+    font-weight: bold;
+    font-size: 23px;
+  }
+  
+  .value {
+    flex: 1;
+    font-weight: bold;
+    color: #0C354F;
+    font-size: 23px;
+  }
+  
+  
+  .box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 20px;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .box-title {
+    background-color: #1A72A9;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  
+  .box p {
+    padding: 20px;
+    font-size: 23px;
+    color: #0C354F;
+    font-weight: bold;
+    background-color: #F5F7F9;
+  }
+  
+  .dropdown-menu {
+    list-style: none;
+    padding-left: 40px;
+    display: none;
+    flex-direction: column;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+  }
+  
+  .dropdown-menu li a:hover {
+      background-color: rgba(18, 50, 71, 0.3); /* warna biru dengan alpha 0.3 */
+      border-radius: 6px;
+      text-decoration: none;
+  }
+  
+  .dropdown-toggle.active + .dropdown-menu {
+    display: flex;
+  }
+
+  .section-header {
+    background: #E9F5FC;
+    padding: 10px;
+    text-align: center;
+    color: #1A72A9;
+    font-size: 32px;
+    font-weight: 900;
+    opacity: 0.9;
+}
+
+.section-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inspection-headers {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #979797;
+    padding-bottom: 14px;
+}
+
+.header-item {
+    width: 243px;
+    text-align: center;
+    color: #1A72A9;
+    font-size: 20px;
+    font-weight: 900;
+    opacity: 0.9;
+}
+
+.inspection-content {
+    display: flex;
+    gap: 18px;
+}
+
+.inspection-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inspection-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-text {
+    width: 120px;
+    text-align: center;
+    color: #1A72A9;
+    font-size: 17px;
+    font-weight: 800;
+    opacity: 0.9;
+}
+
+.divider {
+    width: 2px;
+    height: 77px;
+    background: #979797;
+}
+
+.item-status {
+    width: 53px;
+    text-align: center;
+    color: #1A72A9;
+    font-size: 17px;
+    font-weight: 800;
+    opacity: 0.9;
+}
+
+.button-container {
+    width: 160px;
+    height: 45px;
+    padding: 10px;
+    background: #155B87;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-content {
+    width: 131px;
+    height: 45px;
+    opacity: 0.90;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    word-wrap: break-word;
+}
+.outer-container {
+    align-self: stretch;
+    padding: 10px;
+    background: white;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    display: inline-flex;
+}
+
+.inner-container {
+    width: 386px;
+    height: 45px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.approved-text {
+    color: #22CC66; /* warna approved */
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+}
+.perbaikan-text {
+    color: #FF0000; /* warna approved */
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+}
+.preview-gambar {
+  display: block;
+  margin: 10px auto;   /* Tengah + jarak vertikal kecil */
+  max-width: 300px;    /* Agak besar tapi tidak terlalu */
+  width: 100%;
+  height: auto;
+  border-radius: 6px;  /* Sedikit membulat */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Lebih soft */
+}
+
+.logout {
+  padding: 20px;
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 24px;
+}
+.logout a:link,
+.logout a:visited,
+.logout a:hover,
+.logout a:active {
+  color: white;
+  text-decoration: none;
+}
+.logout img {
+  width: 20px;
+}
+.preview-gambar {
+  display: block;
+  margin: 10px auto;   /* Tengah + jarak vertikal kecil */
+  max-width: 300px;    /* Agak besar tapi tidak terlalu */
+  width: 100%;
+  height: auto;
+  border-radius: 6px;  /* Sedikit membulat */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Lebih soft */
+}

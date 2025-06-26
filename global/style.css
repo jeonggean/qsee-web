@@ -1,0 +1,158 @@
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #bbdff6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 40px; /*atur jarak horizontal antar container */
+    flex-wrap: wrap;  /* agar responsif di layar kecil. BISA AJA DIHAPUS SI */
+  }
+  
+  .container-a {
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 17px 17px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .container-b {
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; */
+    overflow: hidden;
+  }
+  
+  .left-panel {
+    background-color: #2398e1;
+    color: #def0fb;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .left-panel h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .left-panel p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 6rem; /* Jarak antara logo dan tulisan */
+    margin-bottom: 1.5rem;
+  }
+
+  .logo {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .brand-name {
+    font-weight: 800;
+    color: #def0fb;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+  }  
+
+  .website-QC{
+    font-weight: 800;
+  }
+
+  .company-image {
+    width: 550px;
+    height: 400px;
+    /* width: 100%; */
+    border-radius: 8px;
+    /* max-width: 300px; */
+  }
+  
+  .right-panel {
+    background-color: #bbdff6;
+    color: #2089cb;
+    flex: 1;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .right-panel h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .right-panel p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  
+  button {
+    background-color: #2089cb;
+    color: #fff;
+    border: none;
+    padding: 1.3rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  button:hover {
+    background-color: #1a75aa;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    /* padding: 12px; */
+    margin: 10px ;
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.7rem 0.3rem;
+    outline: none; /* Tambahkan ini */
+    font-size: 20px;
+  }
+
+  /* Tambahkan ini untuk placeholder */
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+    color: #1992e6;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px;
+    padding: 20px;
+    }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+  border: 2.5px solid #1992e6; /* Warna border saat aktif (klik) */
+  box-shadow: 0 0 5px rgba(25, 146, 230, 0.5); /* Efek glowing */
+  }
