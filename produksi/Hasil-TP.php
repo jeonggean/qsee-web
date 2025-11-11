@@ -147,7 +147,7 @@
         }
         ?>
         <div class="judul">    
-          <h1>HASIL LAPORAN <?=$penilaian?> </h1>
+          <h1>HASIL LAPORAN <?=$penilaian?></h1>
         </div>
           <h2>IDENTITAS QC</h2>
           <div class="info-column">

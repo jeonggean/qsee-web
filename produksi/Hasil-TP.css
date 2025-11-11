@@ -112,7 +112,6 @@
   .judul{
     font-size: 30px;
     color: #155B87;
-    position: sticky;
     top: 80px; /* mengatur agar muncul di bawah header */
     background-color: #f4f6f9;
     z-index: 9;

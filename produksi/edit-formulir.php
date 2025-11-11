@@ -263,7 +263,7 @@
                 <h2>Dokumentasi</h2>
                 <div class="section-content documentation">
                     <div class="doc-placeholder">
-                      <?php if (!empty($data1['gambar'])): ?>
+                      <?php if (!empty($data['gambar'])): ?>
                           <img src="../uploads/<?= htmlspecialchars($data['gambar']); ?>" alt="Dokumentasi" class="preview-gambar">
                       <?php else: ?>
                           <p><i>Tidak ada dokumentasi gambar</i></p>
